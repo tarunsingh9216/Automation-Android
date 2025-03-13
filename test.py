@@ -21,16 +21,16 @@ def run_command(command, cwd=None):
         print(process.stdout)
 
 
-def pull_project():
+# def pull_project():
 
-    # Clone the repository
-    if os.path.exists(LOCAL_DIR) and os.path.isdir(os.path.join(LOCAL_DIR, ".git")):
-        print("Updating the existing project")
-        run_command("git pull origin main", cwd=LOCAL_DIR)
-    else :
-        print("Clone the Project")
-        run_command(f'git clone {GITHUB_REPO} "{LOCAL_DIR}"')
-        print("Cloning Complete")
+#     # Clone the repository
+#     if os.path.exists(LOCAL_DIR) and os.path.isdir(os.path.join(LOCAL_DIR, ".git")):
+#         print("Updating the existing project")
+#         run_command("git pull origin main", cwd=LOCAL_DIR)
+#     else :
+#         print("Clone the Project")
+#         run_command(f'git clone {GITHUB_REPO} "{LOCAL_DIR}"')
+#         print("Cloning Complete")
 
 
 
