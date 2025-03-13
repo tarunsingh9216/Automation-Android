@@ -25,7 +25,7 @@ jobs:
 
 
       - name: Run Python Script to Modify Android Project
-        run: python my_script.py  # Runs your Python automation script
+        run: python test.py  # Runs your Python automation script
 
       - name: Set Up JDK 17
         uses: actions/setup-java@v3
