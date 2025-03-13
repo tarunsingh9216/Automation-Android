@@ -1,2 +1,1 @@
-# shutil
-# pillow
+Pillow==10.2.0
