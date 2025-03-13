@@ -22,9 +22,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install Python Dependencies
-        run: |
-          pip install -r requirements.txt  # If your script needs dependencies
+
 
       - name: Run Python Script to Modify Android Project
         run: python my_script.py  # Runs your Python automation script
