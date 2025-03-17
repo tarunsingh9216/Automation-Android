@@ -46,7 +46,9 @@ jobs:
           java-version: '17'
 
       - name: Grant Execute Permissions for Gradlew
-        run: chmod +x android/gradlew
+        run: |
+          cd androidProject
+          chmod +x android/gradlew
         shell: bash  # Use bash shell for compatibility
 
       - name: Build Android APK
