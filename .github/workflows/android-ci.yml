@@ -52,7 +52,9 @@ jobs:
         shell: bash  # Use bash shell for compatibility
 
       - name: Build Android APK
-        run: cd android && .\gradlew.bat assembleDebug  # Navigate to android folder before running Gradle
+        run: |
+         cd androidProject
+         cd android && .\gradlew.bat assembleDebug  # Navigate to android folder before running Gradle
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
