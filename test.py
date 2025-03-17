@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 
 GITHUB_REPO = "https://github.com/Anubhav1421/SeatBookingApp"
-LOCAL_DIR = "D:\\personal\\androidAutomate\\androidProject"
+LOCAL_DIR = "\\androidAutomate\\androidProject"
 NEW_APP_NAME = "TestDemo2"
 
 

@@ -54,10 +54,10 @@ jobs:
       - name: Build Android APK
         run: |
          cd androidProject
-         cd android && .\gradlew.bat assembleDebug  # Navigate to android folder before running Gradle
+         cd android && gradlew.bat assembleRelease  # Navigate to android folder before running Gradle
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: react-native-app-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: react-native-app-release-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
