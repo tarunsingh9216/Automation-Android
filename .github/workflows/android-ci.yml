@@ -24,6 +24,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          cd androidProject
           npm install  # Or use 'yarn install' if your project uses Yarn
 
       - name: Set Up Python
