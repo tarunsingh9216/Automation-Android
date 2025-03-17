@@ -54,7 +54,7 @@ jobs:
       - name: Build Android APK
         run: |
          cd androidProject
-         cd android && gradlew.bat assembleRelease  # Navigate to android folder before running Gradle
+         cd android && ./gradlew.bat assembleRelease --stacktrace  # Navigate to android folder before running Gradle
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
