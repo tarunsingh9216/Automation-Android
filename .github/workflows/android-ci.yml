@@ -41,18 +41,18 @@ jobs:
       - name: Build iOS App
         run: |
           cd androidProject/ios/SeatBookingApp.xcodeproj
-          xcodebuild -workspace YourApp.xcworkspace \
-                     -scheme YourApp \
+          xcodebuild -workspace SeatBookingApp.xcworkspace \
+                     -scheme SeatBookingApp \
                      -sdk iphoneos \
                      -configuration Release \
-                     -archivePath $PWD/build/YourApp.xcarchive \
+                     -archivePath $PWD/build/SeatBookingApp.xcarchive \
                      archive
 
       - name: Export IPA File
         run: |
           cd androidProject/ios/SeatBookingApp.xcodeproj
           xcodebuild -exportArchive \
-                     -archivePath build/YourApp.xcarchive \
+                     -archivePath build/SeatBookingApp.xcarchive \
                      -exportOptionsPlist exportOptions.plist \
                      -exportPath build
 
