@@ -33,7 +33,9 @@ jobs:
           pod install --repo-update
 
       - name: Set Up Xcode
-        run: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+        run: |
+          cd androidProject/ios
+          sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
 
       - name: Build iOS App
