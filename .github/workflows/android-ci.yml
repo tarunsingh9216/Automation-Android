@@ -24,23 +24,23 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd androidProject/ios
+          cd androidProject/ios/SeatBookingApp.xcodeproj
           npm install  # Or use 'yarn install' if your project uses Yarn
 
       - name: Install CocoaPods Dependencies
         run: |
-          cd androidProject/ios
+          cd androidProject/ios/SeatBookingApp.xcodeproj
           pod install --repo-update
 
       - name: Set Up Xcode
         run: |
-          cd androidProject/ios
+          cd androidProject/ios/SeatBookingApp.xcodeproj
           sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 
 
       - name: Build iOS App
         run: |
-          cd androidProject/ios
+          cd androidProject/ios/SeatBookingApp.xcodeproj
           xcodebuild -workspace YourApp.xcworkspace \
                      -scheme YourApp \
                      -sdk iphoneos \
@@ -50,7 +50,7 @@ jobs:
 
       - name: Export IPA File
         run: |
-          cd androidProject/ios
+          cd androidProject/ios/SeatBookingApp.xcodeproj
           xcodebuild -exportArchive \
                      -archivePath build/YourApp.xcarchive \
                      -exportOptionsPlist exportOptions.plist \
