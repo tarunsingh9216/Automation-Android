@@ -24,12 +24,12 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd androidProject\ios
+          cd androidProject/ios
           npm install  # Or use 'yarn install' if your project uses Yarn
 
       - name: Install CocoaPods Dependencies
         run: |
-          cd androidProject\ios
+          cd androidProject/ios
           pod install --repo-update
 
       - name: Set Up Xcode
@@ -38,7 +38,7 @@ jobs:
 
       - name: Build iOS App
         run: |
-          cd androidProject\ios
+          cd androidProject/ios
           xcodebuild -workspace YourApp.xcworkspace \
                      -scheme YourApp \
                      -sdk iphoneos \
@@ -48,7 +48,7 @@ jobs:
 
       - name: Export IPA File
         run: |
-          cd androidProject\ios
+          cd androidProject/ios
           xcodebuild -exportArchive \
                      -archivePath build/YourApp.xcarchive \
                      -exportOptionsPlist exportOptions.plist \
